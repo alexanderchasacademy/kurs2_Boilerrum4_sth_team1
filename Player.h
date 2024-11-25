@@ -3,6 +3,7 @@
 
 #include "Card.h"
 #include <vector>
+#include <string>
 
 class Player {
 public:
@@ -18,6 +19,9 @@ public:
 private:
     std::vector<Card> hand;
     int balance;
+    std::string name;
+    int points;
+    int playerNumber;
 };
 
 #endif
