@@ -7,18 +7,8 @@
 
 class BlackjackGame {
 public:
-    BlackjackGame();
-    void playGame();
-    void displayBlackjackRules() const;
-
-private:
-    void playerTurn();
-    void dealerTurn();
-    void determineOutcome();
-
-    Deck deck;
-    Player player;
-    Player dealer;
+    static void displayRules();
+    static void playGame(int &balance);
 };
 
 #endif

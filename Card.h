@@ -3,17 +3,11 @@
 
 #include <string>
 
-class Card {
-public:
-    Card(const std::string& suit, int value);
-
-    std::string getSuit() const;
-    int getValue() const;
-    std::string toString() const;
-
-private:
+struct Card {
     std::string suit;
     int value;
+
+    std::string getCardString() const; // Converts card value to a string for display
 };
 
 #endif

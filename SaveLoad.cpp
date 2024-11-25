@@ -4,7 +4,7 @@
 
 int SaveLoad::loadBalance() {
     std::ifstream inFile("savefile.txt");
-    int balance = 1000;
+    int balance = 1000; // Default starting balance
     if (inFile) {
         inFile >> balance;
         std::cout << "Balance loaded from save: $" << balance << "\n";
