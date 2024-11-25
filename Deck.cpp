@@ -1,12 +1,13 @@
 #include "Deck.h"
 #include <algorithm>
 #include <random>
+#include <ctime>
 
 Deck::Deck() {
     std::string suits[] = {"Hearts", "Diamonds", "Clubs", "Spades"};
     for (const std::string &suit : suits) {
         for (int value = 1; value <= 13; ++value) {
-            cards.emplace_back(suit, value);
+            cards.push_back({suit, value});
         }
     }
     shuffleDeck();
@@ -23,3 +24,4 @@ Card Deck::drawCard() {
     cards.pop_back();
     return card;
 }
+
